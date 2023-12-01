@@ -4,26 +4,24 @@ using namespace std;
 int main(){
     int i;
     int j;
-    int n;
     int temp;
-    int arr[6]={23,4,5,34,90,10};
-    cout << "THe unsorted array:"<<endl;
-    for(int i=0;i< 6;i++){
-       cout << arr[i] << " ";
+    int arr[8]={12,4,5,75,76,4,90,2};
+    cout <<"The unsorted array:";
+    for(int i=0;i<8;i++){
+        cout <<arr[i] <<" ";
     }
-    for(int i=0; i < 6; i++){
+    for(i=1;i<8;i++){
         temp = arr[i];
         j=i-1;
-        while (j>=0 && temp<arr[j])
+        while (arr[j]>temp && j>=0)
         {
-         arr[j+1]=arr[j];
-         j--;
+           arr[j+1]=arr[j];
+           j=j-1;
         }
         arr[j+1]=temp;
     }
-    cout << "The sorted array is:" <<endl;
-    for(int i=0;i<6;i++){
-        cout << arr[i] <<" ";
+    cout <<"SOrted array:";
+    for(int i=0;i<8;i++){
+        cout <<arr[i]<<" ";
     }
-    return 0;
 }

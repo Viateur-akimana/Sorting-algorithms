@@ -5,25 +5,23 @@ int main(){
     int i;
     int j;
     int temp;
-    int arr[8]={40,65,23,1,45,90,56,39};
-    //displaying unsorted array
-    cout << "Unsorted array:" <<endl;
+    int arr[8]={12,23,4,5,2,3,90,1};
+    cout <<"Unsorted array:";
     for(int i=0;i<8;i++){
-        cout << arr[i] <<" ";
+        cout <<arr[i] <<" ";
     }
-     cout <<endl;
-    for(int i=0;i<8;i++){
-        for(int j=i+1;j<8;j++){
-            if(arr[j]<arr[i]){
+     for(i=0;i<7;i++){
+        for(j=i+1;j<8;j++){
+            if(arr[i] > arr[j]){
                 temp=arr[i];
                 arr[i]=arr[j];
                 arr[j]=temp;
             }
         }
-    }
-    cout <<"Sorted array:"<<endl;
-    for(int i=0;i<8;i++){
-    cout << arr[i] <<" ";
-}
+     }
+     cout <<"Sorted array:";
+     for(int i=0;i<8;i++){
+        cout <<arr[i]<<" ";
+     }
 return 0;
 }
