@@ -16,11 +16,11 @@ int main(){
         for(j=i+1;j<8;j++){
             if(arr[j] < arr[min]){
                 min=j;
-            }
+            }}
             temp=arr[i];
             arr[i]=arr[min];
             arr[min] = temp;
-        }
+        
     }
     cout <<"The sorted array:";
     for(int i=0;i<8;i++){
